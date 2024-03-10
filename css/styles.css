@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Poppins", "courier";
+}
+
+body{
+    background: rgb(213, 213, 213);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0 50px;
+    padding: 20px 10%;
+    font-weight: 400;
+}
+
+/* Start of styling the filters */
+#filters {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    padding: 20px;
+    margin: 50px 20px 20px;
+    overflow-y: auto;
+}
+
+
+#filters span {
+    padding: 8px 0 8px;
+}
+
+#filters hr {
+    margin: 8px 0 8px;
+}
+
+#filters input {
+    margin-right: 10px;
+}
+/* End of styling the filters */
+
+/* Start of styling the buttons */
+button {
+    background-color: white;
+    color: black;
+    padding: 10px 10px; 
+    margin: 10px 10px;
+    font-weight: 400; 
+    border: none; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #f2f2f2; 
+}
+
+/* End of styling the buttons */
+
+.car {
+    width: 75%;
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+}
+
+.car img {
+    width: 40%; 
+    max-width: 300px; 
+    height: auto; 
+}
+
+.car p {
+    width: 55%; 
+    margin: 0; 
+}
+
+#carList .car {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}

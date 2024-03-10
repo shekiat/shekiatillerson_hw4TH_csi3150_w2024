@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used Car Sales</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Used Car Sales</h1>
+
+    <aside id="filters">
+        <section id="yearFilter">
+            <span><h3>Year</h3></span>
+
+            <label for="minYear"> Min</label>
+            <input type="text" id="minYear" placeholder="Min Year">
+            
+            <label for="maxYear"> Max</label>
+            <input type="text" id="maxYear" placeholder="Max Year">
+
+            <!-- input horizontal line to seperate filters -->
+            <hr />
+        </section>
+
+        <section id="makeFilter">
+            <span><h3>Make</h3></span>
+
+            <label for="Honda"> Honda</label>
+            <input type="checkbox" id="Honda" name="make" value="Honda">
+
+            <label for="Ford"> Ford</label>
+            <input type="checkbox" id="Ford" name="make" value="Ford">
+
+            <label for="Nissan"> Nissan</label>
+            <input type="checkbox" id="Nissan" name="make" value="Nissan">
+
+            <label for="Chevrolet"> Chevrolet</label>
+            <input type="checkbox" id="Chevrolet" name="make" value="Chevrolet">
+
+            <label for="Toyota"> Toyota</label>
+            <input type="checkbox" id="Toyota" name="make" value="Toyota">
+
+            <!-- input horizontal line to seperate filters -->
+            <hr />
+        </section>
+
+        <section id="mileageFilter">
+            <span><h3> Max. Mileage</h3></span>
+
+            <label for="30000"> 30000</label>
+            <input type="radio" id="30000" name="mileage" value="30000">
+            
+            <label for="40000"> 40000</label>
+            <input type="radio" id="40000" name="mileage" value="40000">
+
+            <label for="50000"> 50000</label>
+            <input type="radio" id="50000" name="mileage" value="50000">
+
+            
+            <!-- input horizontal line to seperate filters -->
+            <hr />
+        </section>
+        
+        
+        <section id="priceFilter">
+            <span><h3>Price</h3></span>
+
+            <select>
+                <option value="">Select Price</option>
+                <option value="5000">Up to $5,000</option>
+                <option value="10000">Up to $10,000</option>
+                <option value="15000">Up to $15,000</option>
+                <option value="20000">Up to $20,000</option>
+            </select>
+
+            <!-- input horizontal line to seperate filters -->
+            <hr />
+        </section>
+        
+        <section id="colorFilter">
+            <span><h3>Color</h3></span>
+
+            <label for="colorFilter"> Silver</label>
+            <input type="checkbox" id="Silver" value="Silver">
+
+            <label for="colorFilter"> White</label>
+            <input type="checkbox" id="White" value="White">
+
+            <label for="colorFilter"> Red</label>
+            <input type="checkbox" id="Red" value="Red">
+
+            <label for="colorFilter"> Blue</label>
+            <input type="checkbox" id="Blue" value="Blue">
+
+            <label for="colorFilter"> Black</label>
+            <input type="checkbox" id="Black" value="Black">
+
+            <!-- input horizontal line to seperate filters -->
+            <hr />
+        </section>
+        
+        <button onclick="applyFilters()">Apply Filters</button>
+        <button onclick="resetFilters()">Reset Filters</button>
+    </aside>
+
+    <main>
+
+    </main>
+
+    <div id="carList"></div>
+    <script src="usedCars.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
