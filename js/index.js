@@ -1,5 +1,5 @@
-// Use a variable to store the car images
-var carImages = {
+// Use a const variable to store the car images
+const carImages = {
     'Toyota': '/assets/images/toyota.jpg',
     'Honda': '/assets/images/honda.jpg',
     'Chevrolet': '/assets/images/chevrolet.jpg',
@@ -9,8 +9,8 @@ var carImages = {
 
 // Gets the filters that the user chose, and stores them in an array.
 function getSelectedValues(inputType, inputName) {
-    var inputs = document.querySelectorAll(inputType + '[name="' + inputName + '"]');
-    var selectedValues = [];
+    const inputs = document.querySelectorAll(inputType + '[name="' + inputName + '"]');
+    const selectedValues = [];
 
     inputs.forEach(function(input) {
         if (input.checked) {
@@ -23,15 +23,15 @@ function getSelectedValues(inputType, inputName) {
 
 // When the user changes a filter, apply the filters to the car list
 function applyFilters() {
-    var minYear = document.getElementById("minYear").value;
-    var maxYear = document.getElementById("maxYear").value;
-    var makes = getSelectedValues('input[type="checkbox"]', 'make');
-    var maxMileage = getSelectedValues('input[type="radio"]', 'mileage');
-    var price = document.querySelector('#priceFilter select').value;
-    var colors = getSelectedValues('input[type="checkbox"]', 'color');
+    const minYear = document.getElementById("minYear").value;
+    const maxYear = document.getElementById("maxYear").value;
+    const makes = getSelectedValues('input[type="checkbox"]', 'make');
+    const maxMileage = getSelectedValues('input[type="radio"]', 'mileage');
+    const price = document.querySelector('#priceFilter select').value;
+    const colors = getSelectedValues('input[type="checkbox"]', 'color');
 
     // Checks to see if cars meet the filter criteria
-    var filteredCars = usedCars.filter(function (car) {
+    const filteredCars = usedCars.filter(function (car) {
         return (
             (!minYear || car.year >= minYear) &&
             (!maxYear || car.year <= maxYear) &&
@@ -44,10 +44,10 @@ function applyFilters() {
 
     
   // Dynamically create the HTML for the car list
-  var carList = document.getElementById("carList");
+  const carList = document.getElementById("carList");
   carList.innerHTML = "";
   filteredCars.forEach(function (car) {
-    var carHTML = `
+    const carHTML = `
         <div class="car">
             <img src="${carImages[car.make]}" alt="${car.make}">
             <p>${car.year} ${car.make}, ${car.mileage} miles, $${car.price}, ${
@@ -63,7 +63,7 @@ function applyFilters() {
 // When the reset button is clicked, clear all the filters
 document.getElementById("resetButton").addEventListener("click", function () {
   // Select all input and select elements
-  var inputs = document.querySelectorAll("input, select");
+  const inputs = document.querySelectorAll("input, select");
 
   inputs.forEach(function (input) {
     if (input.type === "text" || input.type === "select-one") {

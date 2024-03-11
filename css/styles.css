@@ -24,6 +24,7 @@ header{
 /* Start of styling the filters */
 #filters {
     position: fixed;
+    flex-direction: column;
     left: 0;
     top: 0;
     bottom: 0;
